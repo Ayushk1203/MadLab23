@@ -1,0 +1,112 @@
+LAB EXERCISE - 2
+
+QUE 1:
+
+public class Main
+{
+	public static void main(String[] args) {
+		Mother m1=new Mother();
+		m1.x=12;
+		m1.show();
+		Child c1=new Child();
+		c1.x=10;
+		c1.show();
+	}
+}
+
+class Mother{
+    int x;
+    void show(){
+        System.out.println(this.x);
+    }
+}
+
+class Child extends Mother{}
+
+QUE 2:
+
+public class Main
+{
+	public static void main(String[] args) {
+	}
+}
+
+class One{
+    int x;
+    One(int x){
+        this.x=x;
+    }
+}
+
+class Two extends One{
+    Two(){
+    super(12);
+    }
+}
+
+QUE 3:
+public class Main
+{
+	public static void main(String[] args) {
+		Mother m1= new Mother();
+		m1.show();
+		Child c1=new Child();
+		c1.show();
+	}
+}
+
+class Mother{
+    int a;
+    void show(){
+        System.out.println("HELLO THIS IS MOTHER CLASS");
+    }
+}
+
+class Child extends Mother{
+    int y;
+    void show(){
+        System.out.println("HELLO THIS IS CHILD CLASS");
+    }
+}
+
+Que 4:
+public class Main
+{
+	public static void main(String[] args) {
+		Mother m1= new Child();//child class show function will be called
+		m1.show();
+		Child c1=new Child();
+		c1.show();
+	}
+}
+
+class Mother{
+    int a;
+    /*void show(){
+        System.out.println("HELLO THIS IS MOTHER CLASS");
+    }*/
+    static void show(){
+        System.out.println("HELLO THIS IS MOTHER CLASS"); // cannot call a static method 
+    }
+}
+
+class Child extends Mother{
+    int y;
+    /*void show(){
+        System.out.println("HELLO THIS IS CHILD CLASS");
+    }*/
+    static void show(){
+        System.out.println("HELLO THIS IS CHILD CLASS");//error: show() in Child cannot override show() in Mother
+    }
+}
+
+/*public class Main1
+{
+	public static void main(String[] args) {
+		Mother m1= new Child();//child class show function will be called
+		m1.show();
+		Child c1=new Child();
+		c1.show();
+	}
+}*/
+
